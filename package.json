@@ -1,0 +1,22 @@
+{
+  "name": "api_crud_task_node_js",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "API de um crud de tarefas em nodeJs sem framework",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EduardoHorstmann/api_crud_task_node_js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EduardoHorstmann/api_crud_task_node_js/issues"
+  },
+  "homepage": "https://github.com/EduardoHorstmann/api_crud_task_node_js#readme"
+}
