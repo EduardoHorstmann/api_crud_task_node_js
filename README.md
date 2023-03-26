@@ -21,6 +21,6 @@ Atualiza os dados da task com o ID fornecido. A requisição deve ser feita com 
 DELETE /tasks/:id 
 Exclui a task com o ID fornecido.
 
-PATCH /tasks/:id: Marca ou desmarca uma task como concluída.
+PATCH /tasks/:id Marca ou desmarca uma task como concluída.
 
 Para a execução da importação de um arquivo csv deve ser executado o sequinte comando no terminal 'node streams/import-csv.js', após a execução desse comando todas as tasks que estiverem dentro do arquivo tasks.csv serão importadas.
