@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/EduardoHorstmann/api_crud_task_node_js/issues"
   },
-  "homepage": "https://github.com/EduardoHorstmann/api_crud_task_node_js#readme"
+  "homepage": "https://github.com/EduardoHorstmann/api_crud_task_node_js#readme",
+  "dependencies": {
+    "csv-parse": "^5.3.6"
+  }
 }
