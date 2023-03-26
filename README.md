@@ -1,27 +1,26 @@
 # api_crud_task_node_js
-API CRUD de Tasks Este é um exemplo de API de CRUD (Create, Read, Update, Delete) de tasks utilizando Node.js sem nenhum framework.
+Esta API foi desenvolvida para a criação de uma aplicação que realize as operações CRUD (Create, Read, Update, Delete) em uma coleção de tarefas (Tasks). Além disso, a API conta com a funcionalidade de importação em massa de tarefas através de um arquivo CSV.A API foi desenvolvida em Node.js sem o uso de frameworks de tasks, utilizando o módulo csv-parse para realizar a leitura do arquivo CSV por meio de streams.
 
-Pré-requisitos Antes de executar a API, certifique-se de ter o Node.js instalado em sua máquina.
+Pré-requisitos:
+Antes de executar a API, certifique-se de ter o Node.js instalado em sua máquina e instale a lib csv-parse (npm i csv-parse).
 
-Instalação Clone este repositório para sua máquina local. Navegue até o diretório do projeto no terminal. Instale as dependências do projeto com o comando npm install. Executando a API Para executar a API, use o comando npm start. A API será executada na porta 3335.
+Instalação:
+Clone este repositório para sua máquina local. Navegue até o diretório do projeto no terminal. Instale as dependências do projeto com o comando npm install. Executando a API Para executar a API, use o comando npm start. A API será executada na porta 3335.
 
 Endpoints A API oferece os seguintes endpoints:
 
 GET /tasks 
-Retorna todas as tasks cadastradas.
-
-GET /tasks/:id 
-Retorna a task com o ID fornecido.
+Retorna todas as tasks cadastradas. A requisição pode ser feita sem nenhum parâmetro, ou com os parâmetros title e/ou description através da query (search) para filtrar as tarefas pelo título e/ou descrição.
 
 POST /tasks 
-Cria uma nova task com os dados fornecidos no corpo da solicitação.
+Cria uma nova task com os dados fornecidos no corpo da solicitação contendo os campos title e description.
 
 PUT /tasks/:id 
-Atualiza os dados da task com o ID fornecido.
+Atualiza os dados da task com o ID fornecido. A requisição deve ser feita com o corpo da mensagem (body) contendo os campos title e/ou description.
 
 DELETE /tasks/:id 
 Exclui a task com o ID fornecido.
 
-Modelo da task Uma task consiste em um objeto com os seguintes atributos:
+PATCH /tasks/:id: Marca ou desmarca uma task como concluída.
 
-id (número): identificador único da task. title (string): título da task. description (string): descrição da task. completed (boolean): indica se a task foi concluída ou não. Exemplo de uma task:
+Para a execução da importação de um arquivo csv deve ser executado o sequinte comando no terminal 'node streams/import-csv.js', após a execução desse comando todas as tasks que estiverem dentro do arquivo tasks.csv serão importadas.
